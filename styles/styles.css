@@ -3,7 +3,6 @@
 header.row {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
     padding: 12px 40px;
     width: 1280px;
@@ -11,9 +10,7 @@ header.row {
     gap: 20px;
     background: #2B2A2B;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.03);
-    flex: none;
-    align-self: stretch;
-    flex-grow: 0;
+
 }
 
 article.init {
@@ -25,7 +22,6 @@ article.init {
     width: 213.86px;
     height: 36px;
     flex: none;
-    flex-grow: 0;
 }
 
 a#link {
@@ -35,20 +31,12 @@ a#link {
     line-height: 35px;
     color: #FFFFFF;
     opacity: 0.86;
-    flex: none;
-    flex-grow: 0;
 }
 
 
-article .taza {
+article.cup {
     width: 20.53px;
     height: 30px;
-    flex: none;
-    flex-grow: 0;
-    left: 0%;
-    right: 1.16%;
-    top: -0.09%;
-    bottom: 0%;
 }
 
 
@@ -63,7 +51,6 @@ article.menu {
     width: 550px;
     height: 32px;
     flex: none;
-    flex-grow: 0;
 }
 
 a:link {
@@ -74,10 +61,7 @@ a.store {
     width: 61px;
     height: 32px;
     flex: none;
-    flex-grow: 0;
-    font-style: normal;
     display: flex;
-    flex-direction: row;
     align-items: flex-start;
     padding: 8px;
     gap: 8px;
@@ -105,7 +89,7 @@ a.Sus {
     color: #FFFFFF;
 }
 
-a.empresa {
+a.business {
     width: 111px;
     height: 32px;
     flex: none;
@@ -156,7 +140,7 @@ a.cont {
     color: #FFFFFF;
 }
 
-div.servicio {
+div.service {
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -198,7 +182,7 @@ picture {
     height: 18px;
 }
 
-a.numero {
+a.number {
     color: #FFFFFF;
     font-style: normal;
     font-weight: 600;
@@ -285,7 +269,7 @@ div.wrapper {
     border-left: 40px;
 }
 
-article.texto {
+article.txt {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -374,7 +358,7 @@ article.button-wrapper {
     color: #FFFFFF;
 }
 
-article.foto {
+article.pic {
     width: 588px;
     height: 390px;
     border-radius: 20px;
@@ -1528,6 +1512,7 @@ footer {
     border-radius: 4px;
     flex: none;
     flex-grow: 0;
+    border: none;
 }
 
 .buttonA img {
@@ -1559,6 +1544,7 @@ footer {
     border-radius: 4px;
     flex: none;
     flex-grow: 0;
+    border: none;
 }
 
 .buttonB img {
