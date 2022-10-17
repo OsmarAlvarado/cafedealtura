@@ -201,67 +201,114 @@
         <div class="row" id="contact">
             <div class="col support">
                 <article class="header">
-                    <h3>Entra en contacto con nosotros</h3>
-                    <p>Si tienes dudas, ponte en contacto con nosotros a través del formulario y te responderemos lo
+                    <h3 style="font-family: outfit">Entra en contacto con nosotros</h3>
+                    <p style="font-family: outfit">Si tienes dudas, ponte en contacto con nosotros a través del
+                        formulario y te responderemos lo
                         antes posible</p>
                 </article>
                 <article class="enter">
-                    <p>También puedes ponerte en contacto con nostros en nuestra dirección o a través del teléfono de la
+                    <p style="font-family: outfit">También puedes ponerte en contacto con nostros en nuestra dirección o
+                        a través del teléfono de la
                         tienda.</p>
                     <article class="address">
-                        <p>742 Evergreen Terrace</p>
-                        <p>Springfield, OR 1234</p>
+                        <p class="street" style="font-family: outfit">742 Evergreen Terrace</p>
+                        <p class="postal" style="font-family: outfit">Springfield, OR 1234</p>
                     </article>
+
+                    <article class="details">
+                        <article class="detail">
+                            <img src="./image/icon tlfn.png" alt="icon phone">
+                            <p class="cel" style="font-family: outfit">+1 (555) 123-4567</p>
+                        </article>
+                        <article class="detail">
+                            <img src="./image/Icon mail.png" alt="icon mail">
+                            <p class="tray" style="font-family: outfit">support@example.com</p>
+                        </article>
+                    </article>
+                    <p class="job" style="font-family: outfit"> ¿Buscas un trabajo?<a href="#"> <b> Ver nuestras
+                                ofertas.</b></a></p>
                 </article>
-                <article class="details">
-                    <article class="detail">
-                        <img src="./image/icon tlfn.png" alt="icon phone">
-                        <p>+1 (555) 123-4567</p>
-                    </article>
-                    <article class="detail">
-                        <img src="./image/Icon mail.png" alt="icon mail">
-                        <p>support@example.com</p>
-                    </article>
-                </article>
-                <p>¿Buscas un trabajo?<a href="#">Ver nuestras ofertas.</a></p>
             </div>
 
             <div class="col data">
-                <form action="#" method="get">
-                    <label for="fname">Nombre Completo</label>
-                    <input type="text" id="fname" name="fname">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email">
-                    <label for="phone">Teléfono</label>
-                    <article class="phonebox">
-                        <select id="phoneCode" class="form-select" aria-label="Default select">
-                            <option selected>+1</option>
-                            <option value="+34">+34</option>
-                            <option value="+58">+58</option>
-                            <option value="+57">+57</option>
-                        </select>
-                        <input type="tel" id="phone" name="phone" placeholder="123-45-678"
-                            pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
-                        <Format: 123-45-678>
+                <form class="form" action="#" method="get">
+                    <article class="name">
+                        <label style="font-family: outfit" for="fname">Nombre Completo</label>
+                        <input style="font-family: outfit" type="text" id="fname" name="fname">
+                    </article>
+                    <article class="email">
+                        <label style="font-family: outfit" for="email">Email</label>
+                        <input style="font-family: outfit" type="email" id="email" name="email">
+                    </article>
+                    <article class="phone">
+                        <label style="font-family: outfit" for="phone">Teléfono</label>
+                        <article class="phonebox">
+                            <select id="phoneCode" aria-label="Default select">
+                                <option class="select" style="font-family: outfit" selected>US</option>
+                                <option style="font-family: outfit" value="+34">VE</option>
+                                <option style="font-family: outfit" value="+58">CO</option>
+                                <option style="font-family: outfit" value="+57">ES</option>
+                            </select>
+                            <input style="font-family: outfit" type="tel" id="phone" name="phone"
+                                placeholder="+1(555)987-653" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
+                            <Format: 123-456-789>
+                        </article>
                     </article>
                     <article class="area">
-                        <p style="font-family: outfit"><small></small> <label for="view"></label></p>
-                        <textarea id="textarea" name="textarea" rows="8" cols="50"
+                        <p style="font-family: outfit"> <small> <label for="view"></label></small></p>
+                        <textarea style="font-family: outfit" id="textarea" name="textarea" rows="8" cols="50"
                             placeholder="¿En qué podemos ayudarte?"></textarea>
                     </article>
-                    <article id="checkBoxForm">
-                        <input type="checkbox" id="checkbox">
-                        <label for="checkbox">Acepto la <a href="#">Política de Privacidad</a> y los <a
-                                href="#">Términos y
-                                condiciones.</a></label>
+                    <article class="checkBoxForm">
+                        <input style="font-family: outfit" type="checkbox" id="checkbox">
+                        <p class="polytic" style="font-family: outfit"> Acepto la <a href="#"><b>Política de
+                                    Privacidad</b></a> y los <a href="#"><b>Términos y
+                                    condiciones.</b></a></p>
                     </article>
-                    <a id="enviarForm" href="#">Enviar</a>
+                    <a style="font-family: outfit" id="enviarForm" href="#">Enviar</a>
                 </form>
             </div>
         </div>
     </section>
 
+    <footer>
+        <div class="fwrapper">
+            <div class="bowl">
+                <p style="font-family:'outfit" id="link">cafedealtura.com</p>
+                <img src="./image/icon taza.png" alt="icon bowl">
+            </div>
 
+            <div class="row">
+                <article class="col">
+                    <h3>Te ayudamos en</h3>
+                    <button>
+                        <img src="./image/icon phone.png" alt="phone icon">
+                        <a href="#">+34 919 49 05 18</a>
+                    </button>
+                    <button>
+                        <img src="./image/mail white.png" alt="">
+                        <a href="#">hola@cafedealtura.com</a>
+                    </button>
+                </article>
+                <article class="col">
+                    <a href="#">Tienda</a>
+                    <a href="#">Suscripcion</a>
+                    <a href="#">Para empresas</a>
+                    <a href="#">Sobre nosotros</a>
+                    <a href="#">Contacto</a>
+                </article>
+                <article class="col">
+                    <a href="#">Política de privacidad</a>
+                    <a href="#">Política de cookies</a>
+                    <a href="#">Términos y condiciones</a>
+                </article>
+            </div>
+        </div>
+
+        <div>
+            <a href="#">Todos los derechos reservados - Café de Altura SL - 2022</a>
+        </div>
+    </footer>
 
 
 </body>
