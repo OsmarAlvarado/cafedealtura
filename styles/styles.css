@@ -1435,7 +1435,6 @@ footer {
 }
 
 .fwrapper {
-    background-color: #374151;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -1449,11 +1448,11 @@ footer {
 }
 
 .bowl {
-    background-color: #2A5B45;
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 0px;
+    padding-bottom: 20px;
     gap: 7.33px;
     width: 288px;
     height: 36px;
@@ -1483,4 +1482,169 @@ footer {
     height: 24.93px;
     flex: none;
     flex-grow: 0;
+}
+
+.help {
+    width: 1119px;
+    height: 152px;
+    flex: none;
+    flex-grow: 0;
+}
+
+.you {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+    width: 255.33px;
+    height: 152px;
+    left: 0px;
+    top: 0px;
+}
+
+.you h3 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    color: #FFFFFF;
+    width: 135px;
+    height: 22px;
+    flex: none;
+    flex-grow: 0;
+}
+
+.buttonA {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 12px 24px;
+    gap: 8px;
+    width: 175px;
+    height: 45px;
+    background: #515051;
+    border-radius: 4px;
+    flex: none;
+    flex-grow: 0;
+}
+
+.buttonA img {
+    width: 20px;
+    height: 20px;
+    flex: none;
+    flex-grow: 0;
+}
+
+.buttonA a {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFFFFF;
+    flex: none;
+    flex-grow: 0;
+}
+
+.buttonB {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 12px 24px;
+    gap: 8px;
+    width: 222px;
+    height: 45px;
+    background: #515051;
+    border-radius: 4px;
+    flex: none;
+    flex-grow: 0;
+}
+
+.buttonB img {
+    width: 20px;
+    height: 18px;
+    flex: none;
+    align-self: center;
+    flex-grow: 0;
+}
+
+.buttonB a {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFFFFF;
+    flex: none;
+    flex-grow: 0;
+}
+
+.alls {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0px;
+    gap: 16px;
+    width: 10px;
+    height: 144px;
+    padding-left: 700px;
+    padding-top: 3.61px;
+}
+
+.alls a {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    color: #FFFFFF;
+    width: 96px;
+    height: 16px;
+    flex: none;
+    flex-grow: 0;
+}
+
+.cookies {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 16px;
+    width: 255.33px;
+    height: 80px;
+    left: 800px;
+    top: 5px;
+
+}
+
+.cookies a {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 23px;
+    color: #FFFFFF;
+    width: 146px;
+    height: 16px;
+    flex: none;
+    flex-grow: 0;
+}
+
+.reserved {
+    display: flex;
+    width: 1267px;
+    height: 40px;
+    background: #2B2A2B;
+    align-items: center;
+    justify-content: center;
+}
+
+.reserved a {
+    width: 359px;
+    height: 16px;
+    left: 540.5px;
+    top: 12px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    color: #FFFFFF;
 }
