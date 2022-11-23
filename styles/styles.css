@@ -216,7 +216,7 @@ article.button {
     width: 90px;
 }
 
-article.car {
+article.col-car {
     width: 24px;
     height: 30px;
     flex: none;
@@ -235,6 +235,27 @@ article.car {
     color: #FFFFFF;
     bottom: 8.33px;
     margin-right: 0%;
+}
+
+.submenu {
+    position: relative;
+}
+
+.submenu #smallCar {
+    display: none;
+}
+
+.submenu:hover #smallCar {
+    display: block;
+    position: absolute;
+    right: 0;
+
+    top: 100%;
+    z-index: 1;
+    background-color: white;
+    padding: 20px;
+    min-height: 400px;
+    min-width: 300px;
 }
 
 .section1 {
@@ -597,16 +618,13 @@ article.box3 {
     height: 32px;
     background: rgba(42, 91, 69, 0.7);
     border-radius: 4px;
-    flex: none;
-    flex-grow: 0;
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
     line-height: 16px;
     color: #FFFFFF;
-    flex: none;
-    flex-grow: 0;
 }
+
 
 .arrow {
     display: flex;
