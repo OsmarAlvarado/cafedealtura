@@ -52,14 +52,16 @@
             <ul>
                 <li class="submenu">
                     <img src="./image/Group car.png" alt="car-icon" id="car">
+                    <p class="count-product">0</p>
                     <div id="smallCar">
-
-                        <table id="carList" class="u-full-width">
+                        <p class="close-btn" onclick="closeBtn()">X</p>
+                        <table id="carList" class="items">
                             <thead>
                                 <tr>
                                     <th>Imagen</th>
                                     <th>Nombre</th>
                                     <th>Precio</th>
+                                    <th>Amount:</th>
                                     <th></th>
                                 </tr>
                             </thead>
@@ -67,7 +69,9 @@
                         </table>
 
                         <a href="#" id="empty-cart" class="button u-full-width">Vaciar Carrito</a>
+                        <h2>Total: <strong class="price-total">0</strong> €</h2>
                     </div>
+
                 </li>
             </ul>
 
@@ -128,25 +132,25 @@
                 <img src="./image/bag1.png" class="image-cart" alt="Costa Rica coffe">
                 <a style="font-family: outfit" href="#" class="country">Costa Rica Tarrazú</a>
                 <p class="price" style="font-family: outfit">9,00 €</p>
-                <a style="font-family: outfit" class="Add up-car" href="#" data-id="1">Añadir</a>
+                <a style="font-family: outfit" class="Add" href="#" data-id="1">Añadir</a>
             </article>
             <article class="col">
                 <img src="./image/bag2.png" class="image-cart" alt="Colombian coffe">
                 <a style="font-family: outfit" href="#" class="country">Colombia Los Naranjos</a>
                 <p class="price" style="font-family: outfit">9,00 €</p>
-                <a style="font-family: outfit" class="Add up-car" href="#" data-id="2">Añadir</a>
+                <a style="font-family: outfit" class="Add" href="#" data-id="2">Añadir</a>
             </article>
             <article class="col">
                 <img src="./image/bag3.png" class="image-cart" alt="Laos coffe">
                 <a style="font-family: outfit" href="#" class="country">Laos Amanecer</a>
                 <p class="price" style="font-family: outfit">9,00 €</p>
-                <a style="font-family: outfit" class="Add up-car" href="#" data-id="3">Añadir</a>
+                <a style="font-family: outfit" class="Add" href="#" data-id="3">Añadir</a>
             </article>
             <article class="col">
                 <img src="./image/bag4.png" class="image-cart" alt="Etiopia coffe">
                 <a style="font-family: outfit" href="#" class="country">Etiopía Yrgacheff</a>
                 <p class="price" style="font-family: outfit">9,00 €</p>
-                <a style="font-family: outfit" class="Add up-car" href="#" data-id="4">Añadir</a>
+                <a style="font-family: outfit" class="Add" href="#" data-id="4">Añadir</a>
             </article>
 
         </div>
@@ -168,10 +172,12 @@
                     </button>
                 </h3>
                 <hr>
-                <p style="font-family: outfit"><small>Selecciona el café que desees probar y completa el proceso de
-                        compra. Si lo prefieres, te
-                        preguntaremos
-                        cada cuánto quieres que te lo mandemos a casa y así nunca te quedarás sin café.</small></p>
+                <div class="panel">
+                    <p style="font-family: outfit"><small>Selecciona el café que desees probar y completa el proceso de
+                            compra. Si lo prefieres, te
+                            preguntaremos
+                            cada cuánto quieres que te lo mandemos a casa y así nunca te quedarás sin café.</small></p>
+                </div>
             </article>
             <article class="accordion-item big">
                 <h3 class="accordion-header" id="flush-headingOne">
@@ -182,10 +188,14 @@
                     </button>
                 </h3>
                 <hr>
-                <p style="font-family: outfit"><small>Viajamos constantemente para encontrar los mejores granos y a los
+
+                <p style="font-family: outfit"><small>Viajamos constantemente para encontrar los mejores granos y a
+                        los
                         agricultores más exigentes.
-                        Si podemos ofrecerte estos precios es porque tratamos directamente con los productores de café,
-                        sin intermediarios. Así obtenemos el mejor precio para ti y la persona que está detrás de los
+                        Si podemos ofrecerte estos precios es porque tratamos directamente con los productores de
+                        café,
+                        sin intermediarios. Así obtenemos el mejor precio para ti y la persona que está detrás de
+                        los
                         granos de café recibe el mayor beneficio posible.</small></p>
             </article>
             <article class="accordion-item small">
@@ -264,7 +274,8 @@
                     </article>
                     <article class="email">
                         <label style="font-family: outfit" for="email">Email</label>
-                        <input style="font-family: outfit" type="email" id="email" name="email">
+                        <input style="font-family: outfit" type="email" id="email" name="email"
+                            placeholder="abc@gmail.com">
                     </article>
                     <article class="phone">
                         <label style="font-family: outfit" for="phone">Teléfono</label>
@@ -275,9 +286,7 @@
                                 <option style="font-family: outfit" value="+58">CO</option>
                                 <option style="font-family: outfit" value="+57">ES</option>
                             </select>
-                            <input style="font-family: outfit" type="tel" id="phone" name="phone"
-                                placeholder="+1(555)987-653" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
-                            <Format: 123-456-789>
+                            <input style="font-family: outfit" type="tel" name="phone" placeholder="+1(555)987-653">
                         </article>
                     </article>
                     <article class="area">
@@ -286,12 +295,13 @@
                             placeholder="¿En qué podemos ayudarte?"></textarea>
                     </article>
                     <article class="checkBoxForm">
-                        <input style="font-family: outfit" type="checkbox" id="checkbox">
+                        <label for=""></label>
+                        <input type="checkbox">
                         <p class="polytic" style="font-family: outfit"> Acepto la <a href="#"><b>Política de
                                     Privacidad</b></a> y los <a href="#"><b>Términos y
                                     condiciones.</b></a></p>
                     </article>
-                    <a style="font-family: outfit" id="enviarForm" href="#">Enviar</a>
+                    <button style="font-family: outfit" id="enviarForm" href="#">Enviar</button>
                 </form>
             </div>
         </div>

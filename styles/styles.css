@@ -255,6 +255,7 @@ article.col-car {
     padding: 20px;
     min-height: 400px;
     min-width: 300px;
+    transition-delay: 1s;
 }
 
 .section1 {
@@ -672,9 +673,6 @@ article.box3 {
     width: 1267px;
     height: 604px;
     background: #2A5B45;
-    flex: none;
-    align-self: stretch;
-    flex-grow: 0;
 }
 
 #section4 h2 {
@@ -697,9 +695,7 @@ article.box3 {
     padding: 0px;
     gap: 16px;
     width: 668px;
-    height: 408px;
-    flex: none;
-    flex-grow: 0;
+    height: 440px;
 }
 
 #accordionFlush article {
@@ -715,18 +711,25 @@ article.box3 {
 }
 
 .example {
+
     height: 136px;
+
 }
 
 .big {
+
     height: 168px;
+
 }
 
 .small {
+
     height: 72px;
+
 }
 
 .accordion-header {
+    outline: none;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -741,6 +744,7 @@ article.box3 {
 }
 
 #flush-headingOne button {
+
     font-style: normal;
     font-weight: 600;
     font-size: 18px;
@@ -751,6 +755,21 @@ article.box3 {
     flex-grow: 0;
     background: #F7F5F3;
 }
+
+.active,
+.collapsed:hover {
+    background-color: #ccc;
+}
+
+.accordion-flush .accordion-item {
+    position: relative;
+}
+
+.accordion-flush button {
+    cursor: pointer;
+    position: relative;
+}
+
 
 #question1 {
     width: 600px;
@@ -1174,11 +1193,9 @@ p.job {
     font-weight: 400;
     font-size: 12px;
     line-height: 16px;
-    width: 96px;
+    width: 100px;
     height: 16px;
     color: #374151;
-    flex: none;
-    flex-grow: 0;
 }
 
 .name input {
@@ -1236,9 +1253,7 @@ p.job {
     border: 1px solid #D1D5DB;
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
     border-radius: 6px;
-    flex: none;
-    align-self: stretch;
-    flex-grow: 0;
+
 }
 
 .phone {
@@ -1312,11 +1327,12 @@ p.job {
     flex-direction: row;
     align-items: center;
     padding: 9px 13px 9px 0px;
-    width: 402px;
-    height: 34px;
+    width: 100px;
+    height: 35px;
     flex: none;
     flex-grow: 1;
     border: none;
+    border-radius: 9px;
 }
 
 .area {
@@ -1369,12 +1385,11 @@ p.job {
     flex-direction: row;
     align-items: flex-start;
     padding: 0px;
+    padding-right: 30px;
     gap: 12px;
     width: 470px;
     height: 20px;
-    flex: none;
-    align-self: stretch;
-    flex-grow: 0;
+
 }
 
 .checkBoxForm input {
@@ -1417,6 +1432,7 @@ p.polytic {
     height: 40px;
     background: #2A5B45;
     border-radius: 4px;
+    border: none;
     flex: none;
     flex-grow: 0;
     font-style: normal;
