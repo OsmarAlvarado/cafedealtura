@@ -237,25 +237,104 @@ article.col-car {
     margin-right: 0%;
 }
 
-.submenu {
+#car:hover {
+    margin-bottom: 16px;
+    transition-duration: .5s;
+}
+
+.col-car div {
     position: relative;
 }
 
-.submenu #smallCar {
-    display: none;
+.col-car p {
+    position: absolute;
+    top: -10px;
+    right: -8px;
+    background-color: #fff;
+    padding: 1px 6px;
+    border-radius: 50%;
+    color: rgb(17, 4, 4);
+    font-weight: 700;
+    line-height: 18px;
+    font-family: outfit;
+    text-size-adjust: 5px;
 }
 
-.submenu:hover #smallCar {
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 100%;
+.cart-products {
+    position: absolute !important;
+    top: 82px;
+    right: 0px;
+    background: rgb(245, 243, 241);
+    padding: 0 18px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
+    display: none;
     z-index: 1;
-    background-color: white;
-    padding: 20px;
-    min-height: 400px;
-    min-width: 300px;
-    transition-delay: 1s;
+    font-family: outfit;
+    min-width: 290px;
+}
+
+.cart-products .item img {
+    width: 115px;
+}
+
+.cart-products .item {
+    display: flex;
+    align-items: center;
+    border-bottom: solid 2px rgb(26, 97, 8);
+}
+
+.cart-products .item .item-content {
+    margin: 0 19px;
+    width: 201px;
+}
+
+.cart-products .item .item-content h5 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: outfit;
+}
+
+.cart-products .item .item-content h6 {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 400;
+    font-family: outfit;
+}
+
+.cart-products .item span {
+    background-color: rgb(22, 110, 8);
+    padding: 0px 5px;
+    border-radius: 50%;
+    color: #fff;
+    font-family: outfit;
+    cursor: pointer;
+}
+
+
+.cart-products .item .item-content h5.cart-price {
+    font-weight: 700;
+    font-family: outfit;
+}
+
+p.close-btn {
+    top: -4px;
+    right: 6px;
+    cursor: pointer;
+    color: #000;
+    text-decoration: solid;
+    font-weight: 900;
+    font-size: 16px;
+}
+
+.button-cart {
+    background: #1F1815;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: white;
+    border-radius: 4px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
 }
 
 .section1 {
