@@ -1,8 +1,20 @@
 /* inglés */
 
-header.row {
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    position: relative;
+    width: 1280px;
+    height: 3480px;
+    background: #FFFFFF;
+}
+
+header {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
     padding: 12px 40px;
     width: 1280px;
@@ -21,7 +33,6 @@ article.init {
     gap: 7.33px;
     width: 213.86px;
     height: 36px;
-    flex: none;
 }
 
 a#link {
@@ -34,12 +45,10 @@ a#link {
 }
 
 
-article.cup {
+.cup {
     width: 20.53px;
     height: 30px;
 }
-
-
 
 article.menu {
     display: flex;
@@ -50,19 +59,15 @@ article.menu {
     top: 16px;
     width: 550px;
     height: 32px;
-    flex: none;
 }
 
 a:link {
     text-decoration: none;
 }
 
-a.store {
+.store, .Sus, .business, .Us, .cont {
     width: 61px;
-    height: 32px;
-    flex: none;
-    display: flex;
-    align-items: flex-start;
+    height: 32px;    
     padding: 8px;
     gap: 8px;
     font-style: normal;
@@ -74,83 +79,27 @@ a.store {
 
 a.Sus {
     width: 89px;
-    height: 32px;
-    flex: none;
-    flex-grow: 0;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 8px;
-    gap: 8px;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 16px;
-    color: #FFFFFF;
 }
 
 a.business {
     width: 111px;
-    height: 32px;
-    flex: none;
-    flex-grow: 0;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 8px;
-    gap: 8px;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 16px;
-    color: #FFFFFF;
 }
 
 a.Us {
     width: 112px;
-    height: 32px;
-    flex: none;
-    flex-grow: 0;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 8px;
-    gap: 8px;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 16px;
-    color: #FFFFFF;
 }
 
 a.cont {
     width: 75px;
-    height: 32px;
-    flex: none;
-    flex-grow: 0;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 8px;
-    gap: 8px;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 16px;
-    color: #FFFFFF;
 }
 
 div.service {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
+    align-items: center;    
     padding: 0px;
     gap: 24px;
     top: 12px;
     width: 288px;
     height: 40px;
-    flex: none;
-    flex-grow: 0;
 }
 
 article.link-button {
@@ -167,34 +116,28 @@ article.link-button {
 picture {
     width: 24px;
     height: 26px;
-    flex: none;
-    flex-grow: 0;
 }
 
 #phone {
     left: 12.5%;
     right: 12.5%;
     top: 12.5%;
-    bottom: 12.5%;
-    border: 2px solid none;
-    color: #FFFFFF;
-    width: 18px;
-    height: 18px;
+    bottom: 12.5%;    
+    width: 20px;
+    height: 20px;
 }
 
-a.number {
+.number {
     color: #FFFFFF;
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
     line-height: 16px;
     width: 102px;
-    height: 16px;
-    flex: none;
-    flex-grow: 0;
+    height: 16px;    
 }
 
-button.btn-star {
+.btn-star {
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
@@ -208,19 +151,9 @@ button.btn-star {
     color: #FFFFFF;
 }
 
-article.button {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 16px;
-    width: 90px;
-}
-
 article.col-car {
     width: 24px;
-    height: 30px;
-    flex: none;
-    flex-grow: 0;
+    height: 30px;    
     top: 20px;
     left: 1200px;
     border: 2px solid none;
@@ -231,8 +164,7 @@ article.col-car {
     width: 20px;
     height: 20px;
     left: 8px;
-    top: 2px;
-    color: #FFFFFF;
+    top: 2px;    
     bottom: 8.33px;
     margin-right: 0%;
 }
@@ -483,7 +415,7 @@ article.pic {
     flex: none;
 }
 
-h2.condition {
+.condition {
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
@@ -504,25 +436,7 @@ h2.condition {
     flex: none;
 }
 
-article.box1 {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 24px;
-    gap: 16px;
-    width: 316px;
-    height: 232px;
-    background: #FFFFFF;
-    border: 1px solid #F7F5F3;
-    box-shadow: 0px 1px 4px rgba(227, 222, 215, 0.8);
-    border-radius: 8px;
-    flex: none;
-    flex-grow: 1;
-}
-
-article.box2 {
+article.box {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -541,24 +455,6 @@ article.box2 {
     flex-grow: 1;
 }
 
-article.box3 {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 24px;
-    gap: 16px;
-    width: 316px;
-    height: 232px;
-    background: #FFFFFF;
-    border: 1px solid #F7F5F3;
-    box-shadow: 0px 1px 4px rgba(227, 222, 215, 0.8);
-    border-radius: 8px;
-    flex: none;
-    align-self: stretch;
-    flex-grow: 1;
-}
 
 #section2 img {
     display: flex;
@@ -572,7 +468,7 @@ article.box3 {
     flex-grow: 0;
 }
 
-#section2 h3 {
+.order {
     font-style: normal;
     font-weight: 600;
     font-size: 18px;
@@ -605,11 +501,8 @@ article.box3 {
     gap: 40px;
     width: 1267px;
     height: 610px;
-    border: 1px solid #000000;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    flex: none;
     align-self: stretch;
-    flex-grow: 0;
 }
 
 #section3 h2 {
@@ -649,8 +542,6 @@ article.box3 {
     height: 391.39px;
     border: 1px solid #E3DED7;
     border-radius: 8px;
-    flex: none;
-    flex-grow: 1;
 }
 
 #bags img {
@@ -667,7 +558,7 @@ article.box3 {
     line-height: 16px;
     text-align: center;
     color: #000000;
-    width: 143px;
+    width: 145px;
     height: 10px;
     flex: none;
     flex-grow: 0;
@@ -686,6 +577,7 @@ article.box3 {
     flex-grow: 0;
 }
 
+
 .Add {
     box-sizing: border-box;
     display: flex;
@@ -703,6 +595,7 @@ article.box3 {
     line-height: 16px;
     color: #FFFFFF;
 }
+
 
 
 .arrow {
@@ -1551,16 +1444,16 @@ footer {
     padding-bottom: 20px;
     gap: 30px;
     width: 288px;
-    height: 36px;
+    height: 46px;
     flex: none;
     flex-grow: 0;
 }
 
-.bowl p {
+.bowl a {
     font-style: normal;
     font-weight: 400;
     font-size: 23.4628px;
-    line-height: 55px;
+    line-height: 90px;
     color: #FFFFFF;
     width: 160px;
     height: 36px;
@@ -1634,7 +1527,7 @@ footer {
     flex-grow: 0;
 }
 
-.buttonA a {
+.buttonA p {
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
@@ -1667,7 +1560,7 @@ footer {
     flex-grow: 0;
 }
 
-.buttonB a {
+.buttonB p {
     font-style: normal;
     font-weight: 600;
     font-size: 14px;

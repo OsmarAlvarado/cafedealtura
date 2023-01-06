@@ -1,4 +1,4 @@
-// VARIABLES
+// DECLARACION VARIABLES
 
 const allCoffes = document.querySelector("#bags");//.products
 
@@ -156,15 +156,7 @@ function emptyCart(e) {
 
 // //FUNCIONES
 
-// // Función que añade la compra del cafe al carrito
-// function addCoffe(e) {
-//     e.preventDefault();
-//     // Delegation para enviar al carrito
-//     if (e.target.classList.contains("Add")) {
-//         const coffe = e.target.parentElement;
-//         readDataCoffe(coffe);
-//     }
-// }
+
 
 // // Eliminar un producto del carrito en el DOM
 // function eraseCoffe(e) {

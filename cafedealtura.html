@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./style/styles.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
@@ -18,15 +19,15 @@
 <body>
 
     <header class="row">
-        <article class="col init">
+        <article class="init">
             <a style="font-family:'outfit'" href="#" id="link">cafedealtura.com</a>
             <article class="cup">
                 <img src="./image/icon taza.png" alt="icon-bowl" class="icon">
             </article>
         </article>
 
-        <article class="col menu">
-            <a style="font-family: outfit" href="#" class="store">Tienda</a>
+        <article class="menu">
+            <a style="font-family: outfit" href="./store.html" class="store">Tienda</a>
             <a style="font-family: outfit" href="#" class="Sus">Suscripcion</a>
             <a style="font-family: outfit" href="#" class="business">Para empresas</a>
             <a style="font-family: outfit" href="#" class="Us">Sobre nosotros</a>
@@ -106,22 +107,22 @@
     <section id="section2" class="container2">
         <h2 style="font-family: outfit" class="condition">Café con las mejores condiciones</h2>
         <div id="cards" class="row card-wrapper">
-            <article class="col box1">
+            <article class="col box">
                 <img src="./image/Illustration 1.png" alt="icon-order">
                 <h3 style="font-family: outfit" class="order">Recibe tu pedido sin preocuparte</h3>
                 <p style="font-family: outfit" class="content-order">Tienes cosas más importantes en la cabeza, por eso
                     con nuestra suscripción de
                     café, nunca te quedarás sin tu taza de la mañana.</p>
             </article>
-            <article class="col box2">
+            <article class="col box">
                 <img src="./image/Illustration2.png" alt="shipping-icon">
-                <h3 style="font-family: outfit">Envío en 24/48h</h3>
+                <h3 style="font-family: outfit" class="order">Envío en 24/48h</h3>
                 <p style="font-family: outfit" class="content-shipping">Pide tu café antes de las 12h y lo recibirás al
                     día siguiente.</p>
             </article>
-            <article class="col box3">
+            <article class="col box">
                 <img src="./image/Illustration3.png" alt="discounts-icon">
-                <h3 style="font-family: outfit" class="discounts">Descuentos y beneficios</h3>
+                <h3 style="font-family: outfit" class="order">Descuentos y beneficios</h3>
                 <p style="font-family: outfit" class="content-discounts">Cada dos meses, te regalamos una bolsa de un
                     nuevo origen sorpresa, para
                     que lo descubras junto a nosotros.</p>
@@ -132,7 +133,7 @@
 
     <section id="section3">
         <h2 style="font-family: outfit">Novedades</h2>
-        <div id="bags" class="row">
+        <div id="bags">
             <article class="col">
                 <img src="./image/bag1.png" class="image-cart" alt="Costa Rica coffe">
                 <a style="font-family: outfit" href="#" class="country">Costa Rica Tarrazú</a>
@@ -157,10 +158,9 @@
                 <p class="price" style="font-family: outfit">9,00 €</p>
                 <a style="font-family: outfit" class="Add" href="#" data-id="4">Añadir</a>
             </article>
-
         </div>
         <article class="arrow">
-            <a style="font-family: outfit" class="See" href="#">Ver todos</a>
+            <a style="font-family: outfit" class="See" href="./store.html">Ver todos</a>
             <img src="./image/Icon arrow.png" alt="arrow icon">
         </article>
     </section>
@@ -315,7 +315,7 @@
     <footer>
         <div class="fwrapper">
             <div class="bowl">
-                <p style="font-family: outfit" id="link">cafedealtura.com</p>
+                <a style="font-family: outfit" id="link" href="./cafedealtura.html">cafedealtura.com</a>
                 <img src="./image/icon taza.png" alt="icon bowl">
             </div>
 
@@ -324,15 +324,15 @@
                     <h3>Te ayudamos en</h3>
                     <button class="buttonA">
                         <img src="./image/icon phone.png" alt="phone icon">
-                        <a style="font-family: outfit" href="#">+34 919 49 05 18</a>
+                        <p style="font-family: outfit">+34 919 49 05 18</p>
                     </button>
                     <button class="buttonB">
                         <img src="./image/mail white.png" alt="mail icon">
-                        <a style="font-family: outfit" href="#">hola@cafedealtura.com</a>
+                        <p style="font-family: outfit">hola@cafedealtura.com</p>
                     </button>
                 </article>
                 <article class="col alls">
-                    <a style="font-family: outfit" href="#">Tienda</a>
+                    <a style="font-family: outfit" href="./store.html">Tienda</a>
                     <a style="font-family: outfit" href="#">Suscripcion</a>
                     <a style="font-family: outfit" href="#">Para empresas</a>
                     <a style="font-family: outfit" href="#">Sobre nosotros</a>
@@ -360,6 +360,7 @@
         }
 
     </script>
+
 
     <script src="./main.js"></script>
 </body>
