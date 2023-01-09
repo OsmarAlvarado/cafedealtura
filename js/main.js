@@ -1,14 +1,16 @@
 // DECLARACION VARIABLES
 
+
+
 const allCoffes = document.querySelector("#bags");//.products
 
 const carList = document.querySelector(".card-items"); //card-items
 const priceTotal = document.querySelector('.price-total')
 const amountProduct = document.querySelector('.count-product');
 const btnEmptyCar = document.getElementById("empty-cart");
-console.log();
 
-let buyCoffe = [];
+
+let buyCoffe = JSON.parse(localStorage.getItem('car')) || [];
 let totalCoffes = 0;
 let countCoffes = 0;
 
@@ -57,6 +59,7 @@ function deleteCoffes(e) {
         amountProduct.innerHTML = 0;
     }
     loadHtml();
+    saveLocal();
 }
 
 function readDataCoffe(product) {
@@ -87,7 +90,7 @@ function readDataCoffe(product) {
         countCoffes++;
     }
     loadHtml();
-
+    saveLocal()
 }
 
 function loadHtml() {
@@ -111,6 +114,7 @@ function loadHtml() {
         priceTotal.innerHTML = totalCoffes;
 
         amountProduct.innerHTML = countCoffes;
+        saveLocal()
     });
 }
 function clearHtml() {
@@ -120,20 +124,22 @@ function clearHtml() {
 function emptyCart(e) {
     e.preventDefault
 
-    // Forma lenta
-    //carList.innerHTML = "";
-
     // Forma mas rapida y recomendada
     while (carList.firstChild) {
         carList.removeChild(carList.firstChild);
+        saveLocal()
     }
-
 
     priceTotal.innerHTML = 0;
     amountProduct.innerHTML = 0;
     localStorage.removeItem("product");
 
     return false;
+
+}
+
+const saveLocal=()=>{
+    localStorage.setItem('car', JSON.stringify(buyCoffe))
 }
 
 
@@ -272,10 +278,10 @@ function emptyCart(e) {
 // // Almacena productos en el carrito al localStorage
 // function saveLocalStorage(coffe) {
 //     // Tomar el valor del localStorage
-//     let coffes = getCoffesLocalStorage();
-//     // El producto seleccionado se agrega al arreglo
-//     coffes.push(coffe);
-//     localStorage.setItem("coffes", JSON.stringify(coffes));
+//      let coffes = getCoffesLocalStorage();
+//      // El producto seleccionado se agrega al arreglo
+//      coffes.push(coffe);
+//      localStorage.setItem("coffes", JSON.stringify(coffes));
 
 // }
 
@@ -326,6 +332,52 @@ function emptyCart(e) {
 
 //     localStorage.setItem("coffes", JSON.stringify(coffesLS));
 // }
+
+//ACCORDION
+
+const btnCollapsed1 = document.querySelector(".collapsed1")
+const text1 = document.querySelector(".txtOne")
+
+const btnCollapsed2 = document.querySelector(".collapsed2")
+const text2 = document.querySelector(".txtTwo")
+
+const btnCollapsed3 = document.querySelector(".collapsed3")
+const text3 = document.querySelector(".txtThree")
+
+//const flushH3 = document.querySelectorAll('.drop-down')
+//const article = document.querySelector('#section4 div')
+
+
+btnCollapsed1.onclick = () => {
+
+    if (text1.style.display === "block") {
+        text1.style.display = "none"
+
+    } else {
+        text1.style.display = "block"
+    }
+
+}
+
+btnCollapsed2.onclick = () => {
+
+    if (text2.style.display === "none") {
+        text2.style.display = "block"
+    } else {
+        text2.style.display = "none"
+    }
+
+}
+
+btnCollapsed3.onclick = () => {
+
+    if (text3.style.display === "none") {
+        text3.style.display = "block"
+    } else {
+        text3.style.display = "none"
+    }
+
+}
 
 //VAMOS CON EL FORMULARIO
 
@@ -398,5 +450,4 @@ const formValidation = (e) => {
     return true;
 }
 
-
-form.addEventListener('submit', formValidation)
+//form.addEventListener('submit', formValidation)

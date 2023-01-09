@@ -65,9 +65,13 @@ a:link {
     text-decoration: none;
 }
 
-.store, .Sus, .business, .Us, .cont {
+.store,
+.Sus,
+.business,
+.Us,
+.cont {
     width: 61px;
-    height: 32px;    
+    height: 32px;
     padding: 8px;
     gap: 8px;
     font-style: normal;
@@ -94,7 +98,7 @@ a.cont {
 }
 
 div.service {
-    align-items: center;    
+    align-items: center;
     padding: 0px;
     gap: 24px;
     top: 12px;
@@ -122,7 +126,7 @@ picture {
     left: 12.5%;
     right: 12.5%;
     top: 12.5%;
-    bottom: 12.5%;    
+    bottom: 12.5%;
     width: 20px;
     height: 20px;
 }
@@ -134,7 +138,7 @@ picture {
     font-size: 14px;
     line-height: 16px;
     width: 102px;
-    height: 16px;    
+    height: 16px;
 }
 
 .btn-star {
@@ -153,7 +157,7 @@ picture {
 
 article.col-car {
     width: 24px;
-    height: 30px;    
+    height: 30px;
     top: 20px;
     left: 1200px;
     border: 2px solid none;
@@ -164,7 +168,7 @@ article.col-car {
     width: 20px;
     height: 20px;
     left: 8px;
-    top: 2px;    
+    top: 2px;
     bottom: 8.33px;
     margin-right: 0%;
 }
@@ -194,8 +198,8 @@ article.col-car {
 
 .cart-products {
     position: absolute !important;
-    top: 82px;
-    right: 0px;
+    top: 70px;
+    right: 13px;
     background: rgb(245, 243, 241);
     padding: 0 18px;
     box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
@@ -637,143 +641,89 @@ article.box {
 }
 
 #section4 {
+    background-color: #2A5B45;
+    padding: 48px 20px 52px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 48px 386px;
-    gap: 24px;
     width: 1267px;
-    height: 604px;
-    background: #2A5B45;
 }
 
 #section4 h2 {
-    font-family: 'Outfit';
-    font-style: normal;
-    font-weight: 500;
     font-size: 24px;
+    font-weight: 500;
     line-height: 28px;
-    width: 228px;
-    height: 28px;
     color: #FFFFFF;
-    flex: none;
-    flex-grow: 0;
 }
 
-#accordionFlush {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 16px;
-    width: 668px;
-    height: 440px;
+#section4 button {
+    border: none;
+    background-color: transparent;
+    padding: 5px;
 }
 
-#accordionFlush article {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 24px;
-    width: 668px;
-    background: #F7F5F3;
+#section4 div {
     border-radius: 10px;
-    flex: none;
-    flex-grow: 0;
-}
-
-.example {
-
-    height: 136px;
-
-}
-
-.big {
-
-    height: 168px;
-
-}
-
-.small {
-
-    height: 72px;
-
-}
-
-.accordion-header {
-    outline: none;
+    background: #F7F5F3;
+    padding: 10px;
     display: flex;
+    align-items: center;
+}
+
+.drop-down {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+    gap: 0px;
+    width: 650px;
+    height: auto;
+}
+
+.drop-down img {
+    width: 18px;
+    height: 12px;
+    line-height: 10px;
+    -webkit-transition: all 0.3s ease-out;
+    padding: 2px;
+}
+
+.drop-down img:hover {
+    transform: rotate(-180deg);
+}
+
+.drop-down article {
     flex-direction: row;
+    padding: 10px;
+    gap: 16px;
+    width: 650px;
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px;
-    gap: 439px;
-    width: 620px;
-    height: 24px;
-    flex: none;
-    align-self: stretch;
-    flex-grow: 0;
 }
 
-#flush-headingOne button {
-
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 10px;
+.drop-down h3 {
     display: flex;
     align-items: flex-end;
-    flex: none;
-    flex-grow: 0;
-    background: #F7F5F3;
-}
-
-.active,
-.collapsed:hover {
-    background-color: #ccc;
-}
-
-.accordion-flush .accordion-item {
-    position: relative;
-}
-
-.accordion-flush button {
-    cursor: pointer;
-    position: relative;
-}
-
-
-#question1 {
-    width: 600px;
-    height: 20px;
-}
-
-#question2 {
-    width: 600px;
-    height: 20px;
-}
-
-#question3 {
-    width: 600px;
-    height: 20px;
-}
-
-#accordionFlush hr {
-    width: 600px;
-    height: 10px;
-}
-
-
-#accordionFlush p {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
     color: #2B2A2B;
+    padding: 12px 16px;
+}
+
+.drop-down p {
+    padding: 12px 14px;
+    background: #F7F5F3;
+    border-top: solid 1px #E3DED7;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
     width: 600px;
-    height: 42px;
-    flex: none;
+    display: none;
+    margin: 0px;
     align-self: stretch;
+    flex: none;
     flex-grow: 0;
 }
 
@@ -815,18 +765,19 @@ article.box {
     flex-grow: 0;
 }
 
-.bar {
+#section5 div{
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 30px;
-    width: 1200px;
+    gap: 50px;
+    width: 1246px;
     height: 390px;
     padding-left: 50px;
     padding-top: 44px;
+    margin: 0px;
 }
 
-article.text {
+.text {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -841,7 +792,7 @@ article.text {
 .text h2 {
     font-style: normal;
     font-weight: 500;
-    font-size: 26px;
+    font-size: 20px;
     line-height: 28px;
     width: 340px;
     height: 28px;
@@ -853,11 +804,10 @@ article.text {
 .text p {
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 16px;
     color: #111827;
     flex: none;
-    align-self: stretch;
     flex-grow: 0;
     width: 530px;
     height: 32px;
@@ -888,17 +838,16 @@ article.text {
 
 .get img {
     width: 24px;
-    height: 15px;
+    height: 12px;
     flex: none;
     flex-grow: 0;
 }
 
-article.visit {
-    width: 588px;
+.visit img {
+    width: 560px;
     height: 390px;
     border-radius: 20px;
     flex: none;
-    flex-grow: 1;
 }
 
 #section6 {
