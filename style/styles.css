@@ -236,11 +236,13 @@ article.col-car {
 }
 
 .cart-products .item p {
+    display: flex;
     margin: 0 10px;
     width: 80px;
     font-size: 10px;
     font-weight: 400;
     font-family: outfit;
+    justify-content: center;
 }
 
 .delete-product {
@@ -264,6 +266,14 @@ p.close-btn {
     text-decoration: solid;
     font-weight: 900;
     font-size: 12px;
+}
+
+.rest {
+    cursor: pointer;
+}
+
+.summation {
+    cursor: pointer;
 }
 
 /* .button-cart {

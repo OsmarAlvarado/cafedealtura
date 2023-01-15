@@ -207,13 +207,13 @@ article.col-car {
     top: 76px;
     right: 8px;
     background: rgb(245, 243, 241);
-    padding: 0 18px;
+    padding: 0 16px;
     box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
     display: none;
     z-index: 1;
     font-family: outfit;
     width: auto;
-    gap: 2px;
+    gap: 1px;
 }
 
 .cart-products .header-title {
@@ -240,11 +240,13 @@ article.col-car {
 }
 
 .cart-products .item p {
-    margin: 0 10px;
+    display: flex;
+    margin: 0 5px;
     width: 80px;
     font-size: 10px;
     font-weight: 400;
     font-family: outfit;
+    justify-content: center;
 }
 
 .delete-product {
@@ -268,6 +270,14 @@ p.close-btn {
     text-decoration: solid;
     font-weight: 900;
     font-size: 12px;
+}
+
+.rest {
+    cursor: pointer;
+}
+
+.summation {
+    cursor: pointer;
 }
 
 /* .button-cart {

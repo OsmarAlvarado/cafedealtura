@@ -3,9 +3,9 @@
 axios
     .get(`https://cafe-de-altura-api.vercel.app/api/products`)
     .then(response => {
-        const dataProducts = response.data.products
+        const dataProducts = response.data.products;
         console.log(response);
-        const indexProducts = dataProducts.slice(0, 4)
+        const indexProducts = dataProducts.slice(0, 4);
 
         indexProducts.forEach(coffe => {
 
@@ -46,8 +46,8 @@ axios
                     carCoffe.map((anyProduct) => {
                         if (anyProduct.id === coffe._id) {
                             anyProduct.quanty++;
-                        }
-                    })
+                        };
+                    });
                 } else {
                     carCoffe.push({
                         img: coffe.img_url,
@@ -56,12 +56,12 @@ axios
                         id: coffe._id,
                         quanty: 1
                     });
+
+                    carCounter();
+                    saveLocal();
                 };
-
-                carCounter();
-            })
-
-        })
+            });
+        });
 
         const carBuy = document.getElementById("carBuy");
         const shopCoffes = document.getElementById("products-id");
@@ -69,7 +69,7 @@ axios
         const priceTotal = document.querySelector('.price-total');
         const amountProduct = document.querySelector('.count-product');
 
-        let carCoffe = [];
+        let carCoffe = JSON.parse(localStorage.getItem("cart")) || [];
 
         const printCart = () => {
 
@@ -79,19 +79,43 @@ axios
             carHeader.innerHTML = `
             <h1 class="header-title">Mi carrito</h1>
             `;
-            carList.append(carHeader)//se coloca dentro del div cart products y abajo de botonX
+            carList.append(carHeader);//se coloca dentro del div cart products y abajo de botonX
 
             carCoffe.forEach((product) => {
                 const rowCoffe = document.createElement('div');//div2
                 rowCoffe.className = "item";
                 rowCoffe.innerHTML = `
                 <img src="${product.img}">
-                <h3>${product.name}</h3>
+                <h3>${product.name}</h3>                
                 <p class="cart-price">${product.price},00 €</p>
-                <p> Unidades: ${product.quanty}</p>
+                <span class="rest"> - </span>                
+                <p class="quanty"> Unds: ${product.quanty}</p>
+                <span class="summation"> + </span>
                 <p> Subtotal: ${product.quanty * product.price},00 €</p>
                 `
                 carList.append(rowCoffe)
+
+                //Funcion restar
+                const restUnds = rowCoffe.querySelector(".rest");
+
+                restUnds.addEventListener("click", () => {
+                    if (product.quanty !== 1) {
+                        product.quanty--;
+                    };
+
+                    saveLocal();
+                    printCart();
+                });
+
+                //funcion sumar
+                const addUnds = rowCoffe.querySelector(".summation");
+
+                addUnds.addEventListener("click", () => {
+                    product.quanty++;
+
+                    saveLocal();
+                    printCart();
+                });
 
                 const deleteCoffe = document.createElement("span");
                 deleteCoffe.className = "delete-product"
@@ -99,15 +123,15 @@ axios
                 rowCoffe.append(deleteCoffe)
 
                 deleteCoffe.addEventListener("click", coffeDeleted);
-            })
+            });
 
             const totalCoffes = carCoffe.reduce((acc, element) => acc + element.price, 0);
             priceTotal.innerHTML = `Total: ${totalCoffes},00 €`;
 
             shopCoffes.style.display = "block";
-        }
+        };
 
-        carBuy.addEventListener("mouseover", printCart)
+        carBuy.addEventListener("mouseover", printCart);
 
         const coffeDeleted = () => {
             //para buscar en el carrito el elemento con X id
@@ -119,21 +143,28 @@ axios
             });
 
             carCounter();
+            saveLocal();
             printCart();
-        }
+        };
+
+        //set item
+        const saveLocal = () => {
+            localStorage.setItem("cart", JSON.stringify(carCoffe));
+        };
 
         const carCounter = () => {
             amountProduct.style.display = "block"
-            amountProduct.innerText = carCoffe.length
-        }
 
-    })
+            const cartNum = carCoffe.length;
 
+            localStorage.setItem("cartNum", JSON.stringify(cartNum));
 
+            amountProduct.innerText = JSON.parse(localStorage.getItem("cartNum"));
+        };
 
+        carCounter();
 
-
-
+    });
 
 
 // function loadEventListener() {

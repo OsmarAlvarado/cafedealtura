@@ -37,19 +37,20 @@ axios
                 btnAdd.innerText = `Añadir`
                 btnAdd.setAttribute('style', 'font-family: outfit')
                 btnAdd.setAttribute('data-id', coffe._id)
-                
+
                 document.querySelector('#bags').appendChild(article)
 
                 btnAdd.addEventListener("click", () => {
 
-                    const repeat = carCoffe.some((repeatCoffe) => repeatCoffe.id === coffe._id)//buscamos un producto que este repetido
+                    const repeat = carCoffe.some((repeatCoffe) => repeatCoffe.id === coffe._id);//buscamos un producto que este repetido
 
                     if (repeat) {//si es true
                         carCoffe.map((anyProduct) => {
                             if (anyProduct.id === coffe._id) {
                                 anyProduct.quanty++;
-                            }
-                        })
+                            };
+                        });
+
                     } else {
                         carCoffe.push({
                             img: coffe.img_url,
@@ -58,10 +59,11 @@ axios
                             id: coffe._id,
                             quanty: 1
                         });
+
+                        carCounter();
+                        saveLocal();
                     };
-                    
-                    carCounter();
-                })
+                });
 
             } else if (coffe.available === false) {
 
@@ -101,11 +103,7 @@ axios
         const priceTotal = document.querySelector('.price-total');
         const amountProduct = document.querySelector('.count-product');
 
-        let carCoffe = [];
-
-        console.log(shopCoffes);
-        console.log(carList);
-        console.log(carCoffe);
+        let carCoffe = JSON.parse(localStorage.getItem("cart")) || [];
 
         const printCart = () => {
 
@@ -115,36 +113,60 @@ axios
             carHeader.innerHTML = `
             <h1 class="header-title">Mi carrito</h1>
             `;
-            carList.append(carHeader)//se coloca dentro del div cart products y abajo de botonX
+            carList.append(carHeader);//se coloca dentro del div cart products y abajo de botonX
 
             carCoffe.forEach((product) => {
                 const rowCoffe = document.createElement('div');//div2
                 rowCoffe.className = "item";
                 rowCoffe.innerHTML = `
                 <img src="${product.img}">
-                <h3>${product.name}</h3>
+                <h3>${product.name}</h3>                
                 <p class="cart-price">${product.price},00 €</p>
-                <p> Unidades: ${product.quanty}</p>
+                <span class="rest"> - </span>                
+                <p class="quanty"> Unds: ${product.quanty}</p>
+                <span class="summation"> + </span>
                 <p> Subtotal: ${product.quanty * product.price},00 €</p>
                 `
-                carList.append(rowCoffe)                
+                carList.append(rowCoffe)
+
+                //Funcion restar
+                const restUnds = rowCoffe.querySelector(".rest");
+
+                restUnds.addEventListener("click", () => {
+                    if (product.quanty !== 1) {
+                        product.quanty--;
+                    };
+
+                    saveLocal();
+                    printCart();
+                });
+
+                //funcion sumar
+                const addUnds = rowCoffe.querySelector(".summation");
+
+                addUnds.addEventListener("click", () => {
+                    product.quanty++;
+
+                    saveLocal();
+                    printCart();
+                });
 
                 const deleteCoffe = document.createElement("span");
                 deleteCoffe.className = "delete-product"
                 deleteCoffe.innerText = "X";
                 rowCoffe.append(deleteCoffe)
 
-                deleteCoffe.addEventListener("click", coffeDeleted)
-            })
+                deleteCoffe.addEventListener("click", coffeDeleted);
+            });
 
             const totalCoffes = carCoffe.reduce((acc, element) => acc + element.price * element.quanty, 0);
 
             priceTotal.innerHTML = `Total: ${totalCoffes},00 €`;
 
             shopCoffes.style.display = "block";
-        }
+        };
 
-        carBuy.addEventListener("mouseover", printCart)
+        carBuy.addEventListener("mouseover", printCart);
 
         const coffeDeleted = () => {
             //para buscar en el carrito el elemento con X id
@@ -156,16 +178,30 @@ axios
             });
 
             carCounter();
+            saveLocal();
             printCart();
-        }
+        };
+
+        //set item
+        const saveLocal = () => {
+            localStorage.setItem("cart", JSON.stringify(carCoffe));
+        };
 
         const carCounter = () => {
             amountProduct.style.display = "block"
-            amountProduct.innerText = carCoffe.length
-        }
 
+            const cartNum = carCoffe.length;
 
-        // const amountProduct = document.querySelector('.count-product');
+            localStorage.setItem("cartNum", JSON.stringify(cartNum));
+
+            amountProduct.innerText = JSON.parse(localStorage.getItem("cartNum"));
+        };
+
+        carCounter();
+
+    });
+
+    // const amountProduct = document.querySelector('.count-product');
         // const btnEmptyCar = document.getElementById("empty-cart");
 
 
@@ -308,8 +344,6 @@ axios
         // const saveLocal = () => {
         //     localStorage.setItem('car', JSON.stringify(buyCoffe))//al local storage se envia los datos en string
         // }
-
-    })
 
 
 
