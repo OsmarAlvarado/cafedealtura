@@ -210,6 +210,8 @@ article.col-car {
     font-family: outfit;
     width: auto;
     gap: 2px;
+    overflow: scroll;
+    height: 180px;
 }
 
 .cart-products .header-title {
@@ -224,7 +226,7 @@ article.col-car {
 }
 
 .cart-products .item img {
-    width: 45px;
+    width: 50px;
 }
 
 .cart-products .item h3 {
@@ -235,10 +237,30 @@ article.col-car {
     font-family: outfit;
 }
 
-.cart-products .item p {
+.item .cart-price {
     display: flex;
-    margin: 0 10px;
-    width: 80px;
+    margin: 0 5px;
+    width: 35px;
+    font-size: 10px;
+    font-weight: 400;
+    font-family: outfit;
+    justify-content: center;
+}
+
+.cart-products .item .quanty {
+    display: flex;
+    margin: 0 5px;
+    width: 35px;
+    font-size: 10px;
+    font-weight: 400;
+    font-family: outfit;
+    justify-content: center;
+}
+
+.cart-products .item .subT {
+    display: flex;
+    margin: 0 5px;
+    width: 90px;
     font-size: 10px;
     font-weight: 400;
     font-family: outfit;
@@ -256,7 +278,7 @@ article.col-car {
 
 p.close-btn {
     position: absolute;
-    top: -4px;
+    top: 2px;
     right: 1px;
     cursor: pointer;
     background-color: #fff;
@@ -269,11 +291,23 @@ p.close-btn {
 }
 
 .rest {
+    background: rgba(42, 91, 69, 0.7);
+    padding: 0px 5px;
+    border-radius: 50%;
+    color: #fff;
+    font-family: outfit;
     cursor: pointer;
+    font-size: 12px;
 }
 
 .summation {
+    background: rgba(42, 91, 69, 0.7);
+    padding: 0px 5px;
+    border-radius: 50%;
+    color: #fff;
+    font-family: outfit;
     cursor: pointer;
+    font-size: 12px;
 }
 
 /* .button-cart {

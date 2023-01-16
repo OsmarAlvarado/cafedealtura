@@ -5,7 +5,7 @@ axios
     .get(`https://cafe-de-altura-api.vercel.app/api/products`)
     .then(response => {
         const dataProducts = response.data.products
-        console.log(dataProducts);
+        //console.log(dataProducts);
 
         dataProducts.forEach((coffe) => {
 
@@ -125,7 +125,8 @@ axios
                 <span class="rest"> - </span>                
                 <p class="quanty"> Unds: ${product.quanty}</p>
                 <span class="summation"> + </span>
-                <p> Subtotal: ${product.quanty * product.price},00 €</p>
+                <p class="subT"> Subtotal: ${product.quanty * product.price},00 €</p>
+                <span class="delete-product"> X </span>
                 `
                 carList.append(rowCoffe)
 
@@ -151,12 +152,12 @@ axios
                     printCart();
                 });
 
-                const deleteCoffe = document.createElement("span");
-                deleteCoffe.className = "delete-product"
-                deleteCoffe.innerText = "X";
-                rowCoffe.append(deleteCoffe)
+                const coffedel = rowCoffe.querySelector(".delete-product")
 
-                deleteCoffe.addEventListener("click", coffeDeleted);
+                coffedel.addEventListener("click", () => {
+                    coffeDeleted(product.id);
+                });
+
             });
 
             const totalCoffes = carCoffe.reduce((acc, element) => acc + element.price * element.quanty, 0);
@@ -168,9 +169,9 @@ axios
 
         carBuy.addEventListener("mouseover", printCart);
 
-        const coffeDeleted = () => {
+        const coffeDeleted = (id) => {
             //para buscar en el carrito el elemento con X id
-            const idFounded = carCoffe.find((element) => element.id)
+            const idFounded = carCoffe.find((element) => element.id === id);
 
             //le asignamos un valor al carrito usando el filter
             carCoffe = carCoffe.filter((carId) => {
